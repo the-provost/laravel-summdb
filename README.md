@@ -2,6 +2,14 @@
 
 This tool analyzes Laravel migration files and generates a summary of the database structure, including an Entity-Relationship Diagram (ERD) using Mermaid.js syntax.
 
+[![npm version](https://img.shields.io/npm/v/laravel-db-summary.svg?style=badge)](https://www.npmjs.com/package/hapi-mvc)
+[![License](https://img.shields.io/github/license/the-provost/laravel-summdb.svg?style=badge)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/the-provost/laravel-summdb.svg?style=badge)](https://github.com/the-provost/hapi-mvc/stargazers)
+[![GitHub tag](https://img.shields.io/github/tag/the-provost/laravel-summdb.svg?style=badge)](https://github.com/the-provost/hapi-mvc/tags)
+![NPM Downloads](https://img.shields.io/npm/dt/laravel-db-summary)
+
+---
+
 ### Package Name
 The name of the package on the github repo is a portmanteau of 'Summed Up' to denote a summing up of the DB of the app.
 
