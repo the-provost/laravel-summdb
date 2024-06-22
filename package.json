@@ -1,0 +1,39 @@
+{
+  "name": "laravel-db-summary",
+  "version": "0.1.1",
+  "description": "A tool to summarize Laravel database structure from migration files",
+  "main": "summarize_laravel_db.js",
+  "bin": {
+    "laravel-db-summary": "./cli.js"
+  },
+  "scripts": {
+    "start": "node summarize_laravel_db.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
+  },
+  "optionalDependencies": {
+    "@mermaid-js/mermaid-cli": "^9.1.0"
+  },
+  "keywords": [
+    "laravel",
+    "database",
+    "migrations",
+    "summary",
+    "erd"
+  ],
+  "author": "the-provost",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-provost/laravel-db-summary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-provost/laravel-db-summary/issues"
+  },
+  "homepage": "https://github.com/the-provost/laravel-db-summary#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
