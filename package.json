@@ -1,6 +1,6 @@
 {
   "name": "laravel-db-summary",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tool to summarize Laravel database structure from migration files",
   "main": "summarize_laravel_db.js",
   "bin": {
@@ -11,10 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "readline": "^1.3.0"
+    "readline": "*"
   },
   "optionalDependencies": {
-    "@mermaid-js/mermaid-cli": "^9.1.0"
+    "@mermaid-js/mermaid-cli": "*"
   },
   "keywords": [
     "laravel",
