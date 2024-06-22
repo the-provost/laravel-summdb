@@ -1,6 +1,6 @@
 {
   "name": "laravel-db-summary",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A tool to summarize Laravel database structure from migration files",
   "main": "summarize_laravel_db.js",
   "bin": {
