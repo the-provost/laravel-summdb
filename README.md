@@ -174,7 +174,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Issues
 
-If you find a bug or have a suggestion, please file an issue on the [GitHub repository](https://github.com/the-provost/laravel-db-summary/issues).
+If you find a bug or have a suggestion, please file an issue on the [GitHub repository](https://github.com/the-provost/laravel-summDB/issues).
 
 ## Credits
 
