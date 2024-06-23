@@ -1,6 +1,6 @@
 {
   "name": "laravel-db-summary",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A tool to summarize Laravel database structure from migration files",
   "main": "src/summarize_laravel_db.js",
   "bin": {
@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/the-provost/laravel-db-summary.git"
+    "url": "https://github.com/the-provost/laravel-summdb.git"
   },
   "bugs": {
     "url": "https://github.com/the-provost/laravel-db-summary/issues"
