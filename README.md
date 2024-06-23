@@ -31,6 +31,14 @@ Or use it directly with npx:
 npx laravel-db-summary
 ```
 
+#### COMPOSER:
+
+You can install the package via Composer:
+
+```bash
+composer require the-provost/laravel-summdb
+```
+
 ## Usage
 ### NPM:
 
@@ -49,6 +57,18 @@ laravel-db-summary
 ```
 laravel-db-summary /path/to/your/laravel/project
 ```
+
+
+### COMPOSER
+
+After installation, you can use the Laravel SummDB command:
+
+```bash
+php artisan db:summarize
+```
+
+This command will analyze your Laravel migration files and generate a summary.
+
 
 ## Output
 
@@ -81,6 +101,18 @@ git clone https://github.com/the-provost/laravel-summdb.git
 
 Navigate to the desired package directory (js/ or php/) and follow the development instructions in the respective README.
 
+## Configuration
+### COMPOSER:
+
+You can publish the configuration file with:
+
+```bash
+php artisan vendor:publish --provider="TheProvost\LaravelSummDB\LaravelSummDBServiceProvider" --tag="config"
+```
+
+This will publish a `laravel-summdb.php` file in your config directory.
+
+
 ## Integrating with CI/CD Pipeline 
 #### NPM:
 
@@ -90,7 +122,7 @@ To include Laravel DB Summarizer as part of your CI/CD pipeline, follow these st
    Add this to your CI configuration file (e.g., `.gitlab-ci.yml`, `.github/workflows/main.yml`):
 
    ```yaml
-   - npm install -g laravel-db-summary
+   - js install -g laravel-db-summary
    ```
 
 2. **Run Laravel DB Summarizer**:
@@ -113,7 +145,7 @@ To include Laravel DB Summarizer as part of your CI/CD pipeline, follow these st
    If you want to generate the PNG in your CI pipeline, ensure Mermaid CLI is installed:
 
    ```yaml
-   - npm install -g @mermaid-js/mermaid-cli
+   - js install -g @mermaid-js/mermaid-cli
    ```
 
 5. **Example GitLab CI configuration**:
@@ -127,7 +159,7 @@ To include Laravel DB Summarizer as part of your CI/CD pipeline, follow these st
    document_db:
      stage: document
      script:
-       - npm install -g laravel-db-summary @mermaid-js/mermaid-cli
+       - js install -g laravel-db-summary @mermaid-js/mermaid-cli
        - laravel-db-summary .
      artifacts:
        paths:
@@ -148,13 +180,33 @@ To include Laravel DB Summarizer as part of your CI/CD pipeline, follow these st
          uses: actions/setup-node@v2
          with:
            node-version: '14'
-       - run: npm install -g laravel-db-summary @mermaid-js/mermaid-cli
+       - run: js install -g laravel-db-summary @mermaid-js/mermaid-cli
        - run: laravel-db-summary .
        - uses: actions/upload-artifact@v2
          with:
            name: db-summary
            path: db-summary/
    ```
+
+#### COMPOSER:
+
+To include Laravel SummDB as part of your Laravel CI/CD pipeline, you can add the command to your build process. For example, in GitLab CI:
+
+```yaml
+stages:
+  - build
+  - test
+  - document
+
+document_db:
+  stage: document
+  script:
+    - php artisan db:summarize
+  artifacts:
+    paths:
+      - db-summary/
+```
+
 
 By following these steps, you'll ensure that every build of your Laravel application includes an up-to-date database summary and ERD.
 

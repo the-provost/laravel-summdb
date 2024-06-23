@@ -1,5 +1,16 @@
+# Node.js
+node_modules/
+
+# Composer
+vendor/
+
+# PHP
+.phpunit.result.cache
+
+# General
 .idea
+.DS_Store
+*.log
+.phpunit.result.cache
+composer.lock
 db-summary
-node_modules
-package-lock.json
-package.json
