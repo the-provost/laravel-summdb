@@ -5,12 +5,12 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Your Name",
-      "email": "your.email@example.com"
+      "name": "Jesil Jose (the-provost)",
+      "email": "the-provost@icloud.com"
     }
   ],
   "require": {
-    "php": "^7.3|^8.0",
+    "php": "^7.3|^8.3",
     "laravel/framework": "^8.0|^9.0|^10.0"
   },
   "require-dev": {
