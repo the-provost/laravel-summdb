@@ -82,7 +82,7 @@ git clone https://github.com/the-provost/laravel-summdb.git
 Navigate to the desired package directory (js/ or php/) and follow the development instructions in the respective README.
 
 ## Integrating with CI/CD Pipeline 
-#### FOR the .js package in a Laravel App
+#### NPM:
 
 To include Laravel DB Summarizer as part of your CI/CD pipeline, follow these steps:
 
