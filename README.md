@@ -17,6 +17,7 @@ The name of the package on the github repo is a portmanteau of 'Summed Up' to de
 The npm package name however is a clear and understandable 'laravel-db-summary'.
 
 ## Installation
+### NPM:
 
 You can install Laravel DB Summarizer globally using npm:
 
@@ -31,6 +32,7 @@ npx laravel-db-summary
 ```
 
 ## Usage
+### NPM:
 
 There are two ways to use Laravel DB Summarizer:
 
