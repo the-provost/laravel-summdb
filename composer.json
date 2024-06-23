@@ -9,6 +9,12 @@
       "email": "the-provost@icloud.com"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/the-provost/laravel-summdb"
+    }
+  ],
   "require": {
     "php": "^7.3|^8.3",
     "laravel/framework": "^8.0|^9.0|^10.0"
