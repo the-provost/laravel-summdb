@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Composer
+vendor/
+
+# PHP
+.phpunit.result.cache
+
+# General
+*/db-summary
+.DS_Store
+*.log
+.phpunit.result.cache
+composer.lock
+db-summary

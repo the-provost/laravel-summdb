@@ -1,14 +1,14 @@
 {
   "name": "laravel-db-summary",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A tool to summarize Laravel database structure from migration files",
-  "main": "summarize_laravel_db.js",
+  "main": "src/summarize_laravel_db.js",
   "bin": {
-    "laravel-db-summary": "./cli.js"
+    "laravel-db-summary": "cli.js"
   },
   "scripts": {
-    "start": "node summarize_laravel_db.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/summarize_laravel_db.js",
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "readline": "*"

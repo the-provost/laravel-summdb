@@ -1,0 +1,38 @@
+{
+  "name": "the-provost/laravel-summdb",
+  "description": "A tool to summarize Laravel database structure from migration files",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Your Name",
+      "email": "your.email@example.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "laravel/framework": "^8.0|^9.0|^10.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "TheProvost\\LaravelSummDB\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TheProvost\\LaravelSummDB\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "TheProvost\\LaravelSummDB\\LaravelSummDBServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

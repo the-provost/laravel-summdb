@@ -3,10 +3,12 @@ const path = require('path');
 const readline = require('readline');
 const { exec, execSync } = require('child_process');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+function getReadlineInterface() {
+    return readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+}
 
 /**
  * Parses a single migration file and extracts table name, columns, and foreign keys.
@@ -194,7 +196,6 @@ function generateERDImage(summaryDir) {
 function summarizeMigrations(migrationsPath) {
     if (!fs.existsSync(migrationsPath)) {
         console.error(`Error: The directory ${migrationsPath} does not exist.`);
-        rl.close();
         return;
     }
 
@@ -208,8 +209,6 @@ function summarizeMigrations(migrationsPath) {
     writeMermaidERD(summaryDir, mermaidCode);
 
     generateERDImage(summaryDir);
-
-    rl.close();
 }
 
 /**
@@ -220,18 +219,33 @@ function main() {
     console.log('===========================');
 
     if (process.argv.length > 2) {
-        // If a path is provided as a command-line argument, use it.
         const laravelProjectPath = process.argv[2];
         const migrationsPath = path.join(laravelProjectPath, 'database', 'migrations');
         summarizeMigrations(migrationsPath);
     } else {
-        // If no path is provided, prompt the user.
+        const rl = getReadlineInterface();
         rl.question('Please enter the path to your Laravel project: ', (laravelProjectPath) => {
             const migrationsPath = path.join(laravelProjectPath, 'database', 'migrations');
             summarizeMigrations(migrationsPath);
+            rl.close();
         });
     }
 }
 
 // Run the main function.
-main();
+if (require.main === module) {
+    main();
+}
+
+// At the end of the file
+module.exports = {
+    parseMigrationFile,
+    getAllMigrationFiles,
+    generateMermaidERD,
+    createSummaryDirectory,
+    writeTextSummary,
+    isMermaidCliAvailable,
+    summarizeMigrations,
+    main,
+    getReadlineInterface
+};
